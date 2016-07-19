@@ -6,7 +6,7 @@
 var weightStatGJ=true;
 var heightStatM=true;
 /**function calculator */
-var bmi=new float;
+var bmi;
 
 /**
  * 选择模块，用于选择参数状态
@@ -71,5 +71,6 @@ calculator.onclick=function () {
             height=height/10;
             bmi=weight/(height*height);
     }
-    return bmi;
+        return bmi;
+    }
 }
