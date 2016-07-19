@@ -70,7 +70,7 @@ calculator.onclick=function () {
             correction(weight,height);
             bmi=weight/(height*height);
         } else {
-             weight=weight/2;
+            weight=weight/2;
             height=height/100;
             correction(weight,height);
             bmi=weight/(height*height);
