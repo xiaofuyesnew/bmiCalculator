@@ -57,18 +57,22 @@ calculator.onclick=function () {
     var height=parseFloat(document.getElementById('height_num').value);
     if (weightStatGJ) {
         if (heightStatM) {
+            correction(weight,height);
             bmi=weight/(height*height);
         } else {
-            height=height/10;
+            height=height/100;
+            correction(weight,height);
             bmi=weight/(height*height);
         }
     } else {
         if (heightStatM) {
             weight=weight/2;
+            correction(weight,height);
             bmi=weight/(height*height);
         } else {
              weight=weight/2;
-            height=height/10;
+            height=height/100;
+            correction(weight,height);
             bmi=weight/(height*height);
         }
     }
@@ -95,6 +99,7 @@ calculator.onclick=function () {
 //容错函数
 function correction(weight,height){
     if (weight === 0 || height === 0) alert('请输入完整数值！');
-    //if ()
+    if (isNaN(weight) || isNaN(height)) alert('请输入有效数值！');
+    if (weight>300 || height>3) alert('你确定这不是一头怪物？');
 }
 
