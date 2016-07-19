@@ -2,8 +2,11 @@
 /**
  * 全局变量
  */
+/*function choice*/
 var weightStatGJ=true;
 var heightStatM=true;
+/**function calculator */
+var bmi=new float;
 
 /**
  * 选择模块，用于选择参数状态
@@ -41,7 +44,7 @@ function choice(){
     }
 
 }
-
+//运行选择程序
 choice();
 
 /**
@@ -49,8 +52,19 @@ choice();
  * 
  */
 var calculator=document.getElementById('calculator');
-calculator.onclick=function (weight,height) {
+calculator.onclick=function () {
+    var weight=parseFloat(document.getElementById('weight_num').value);
+    var height=parseFloat(document.getElementById('height_num').value);
+    if (weightStatGJ) {
+        
+    } else {
+
+    }
     
-    var bmi=weight/(height*height);
+    
+    
+    
+    
+    
 
 }
