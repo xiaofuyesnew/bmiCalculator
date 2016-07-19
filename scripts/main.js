@@ -70,7 +70,31 @@ calculator.onclick=function () {
              weight=weight/2;
             height=height/10;
             bmi=weight/(height*height);
+        }
     }
-        return bmi;
+    //显示结果
+    var result=document.getElementById('bmi');
+    var bodyType=document.getElementById('body_type');
+    result.innerHTML=bmi.toFixed(1);
+    if (bmi<18.5) {
+        bodyType.innerHTML="偏瘦";
+    } else if (bmi>=18.5 && bmi<25) {
+        bodyType.innerHTML="正常";
+    } else if (bmi>=25 && bmi<30) {
+        bodyType.innerHTML="偏胖";
+    } else if (bmi>=30 && bmi<35) {
+        bodyType.innerHTML="肥胖";
+    } else if (bmi>=35 && bmi<40) {
+        bodyType.innerHTML="重度肥胖";
+    } else {
+        bodyType.innerHTML="极重度肥胖";
     }
+
 }
+ 
+//容错函数
+function correction(weight,height){
+    if (weight === 0 || height === 0) alert('请输入完整数值！');
+    //if ()
+}
+
