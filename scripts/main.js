@@ -56,15 +56,20 @@ calculator.onclick=function () {
     var weight=parseFloat(document.getElementById('weight_num').value);
     var height=parseFloat(document.getElementById('height_num').value);
     if (weightStatGJ) {
-        
+        if (heightStatM) {
+            bmi=weight/(height*height);
+        } else {
+            height=height/10;
+            bmi=weight/(height*height);
+        }
     } else {
-
+        if (heightStatM) {
+            weight=weight/2;
+            bmi=weight/(height*height);
+        } else {
+             weight=weight/2;
+            height=height/10;
+            bmi=weight/(height*height);
     }
-    
-    
-    
-    
-    
-    
-
+    return bmi;
 }
