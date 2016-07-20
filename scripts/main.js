@@ -8,10 +8,6 @@ var heightStatM=true;
 /**function calculator */
 var bmi;
 
-/**
- * 选择模块，用于选择参数状态
- */
-function choice(){
     //按照id选择了相关的元素
     var weightUnit=document.getElementById('weight_unit');
     var jin=document.getElementById('jin');
@@ -42,10 +38,6 @@ function choice(){
         heightStatM=true;
         limi.checked='';
     }
-
-}
-//运行选择程序
-choice();
 
 /**
  * 核心算法，bmi的计算函数
